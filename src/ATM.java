@@ -1,7 +1,12 @@
 
 public class ATM {
-public void deposit(String ID, double amount)
+	private String [] ids;
+public void deposit(String id, double amount)
 {
+	if(id == null)
+	{
+		
+	}
 	
 }
 }
