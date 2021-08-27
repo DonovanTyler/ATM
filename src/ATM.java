@@ -1,6 +1,6 @@
 
 public class ATM {
-public int deposit(String ID, int amount)
+public void deposit(String ID, double amount)
 {
 	
 }
