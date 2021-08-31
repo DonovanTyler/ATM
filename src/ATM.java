@@ -5,7 +5,7 @@ private static HashMap<String, Double> ids = new HashMap();
 public static void deposit(String id, double amount)
 {
 		ids.putIfAbsent(id, 0.0);
-		ids.put(id, ids.get(id) + amount);
+		ids.replace(id, ids.get(id) + amount);
 		System.out.println(ids.get(id));
 }
 private static boolean allNumbers(String check)
