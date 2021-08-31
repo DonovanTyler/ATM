@@ -10,4 +10,9 @@ public class ATM
 		ids.putIfAbsent(id, 0.0);
 		ids.replace(id, ids.get(id) + amount);
 	}
+	
+	public static void withdraw(String id, double amount)
+	{
+		//withdraw money and make sure not over withdraw
+	}
 }
