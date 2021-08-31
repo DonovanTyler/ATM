@@ -15,4 +15,9 @@ public class ATM
 	{
 		//withdraw money and make sure not over withdraw
 	}
+	
+	public static void checkBalance(String id)
+	{
+		//return balance or return error if no account exists
+	}
 }
