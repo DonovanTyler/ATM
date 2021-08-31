@@ -1,17 +1,12 @@
 import java.util.HashMap;
 import java.util.Scanner;
 public class ATM {
-private static HashMap<String, Double> ids;
+private static HashMap<String, Double> ids = new HashMap();
 public static void deposit(String id, double amount)
 {
-	if(ids.isEmpty() || !ids.containsKey(id))
-	{
-		ids.put(id, amount);
-	}
-	else
-	{
+		ids.putIfAbsent(id, 0.0);
 		ids.put(id, ids.get(id) + amount);
-	}
+		System.out.println(ids.get(id));
 }
 private static boolean allNumbers(String check)
 {
