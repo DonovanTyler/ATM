@@ -3,6 +3,7 @@ public class Tester
 	public static void main (String [] args)
 	{
 		ATM atm = new ATM ();
+		
 		atm.deposit("Winfrey", 25159684372.43);
 		atm.deposit("Bezos", 193495330293.43);
 		atm.deposit("Bezos", 20394353.35);

@@ -1,23 +1,38 @@
-import java.util.HashMap;
-import java.util.Scanner;
+//import java.util.HashMap;
+//import java.util.Scanner;
+import java.util.*;
 
 public class ATM
 {
 	private static HashMap<String, Double> ids = new HashMap();
 	
-	public static void deposit(String id, double amount)
+	public void deposit(String id, double amount)
 	{
 		ids.putIfAbsent(id, 0.0);
 		ids.replace(id, ids.get(id) + amount);
 	}
 	
-	public static void withdraw(String id, double amount)
+	public void withdraw(String id, double amount)
 	{
-		//withdraw money and make sure not over withdraw
+		double oldValue = ids.get(id);
+		
+		if (amount <= oldValue)
+		{
+			double newValue = oldValue - amount;
+			ids.put(id, newValue);
+		}
 	}
 	
-	public static void checkBalance(String id)
+	public String checkBalance(String id)
 	{
-		//return balance or return error if no account exists
+		if (ids.containsKey(id))
+		{
+			double balance = ids.get(id);
+			return ("The balance is: " + balance);
+		}
+		else
+		{
+			return("There is no account associated with the given id.");
+		}
 	}
 }
