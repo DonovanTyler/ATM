@@ -10,9 +10,9 @@ public class Tester
 		atm.withdraw("Bezos", 3593293.66);
 		atm.deposit("MrTheiss",64033.55);
 		atm.withdraw("MrTheiss", 443964.46);
-		atm.checkBalance("Bezos");
-		atm.checkBalance("Winfrey");
-		atm.checkBalance("YoMama");
-		atm.checkBalance("MrTheiss");
+		System.out.println(atm.checkBalance("Bezos"));
+		System.out.println(atm.checkBalance("Winfrey"));
+		System.out.println(atm.checkBalance("YoMama"));
+		System.out.println(atm.checkBalance("MrTheiss"));
 	}
 }

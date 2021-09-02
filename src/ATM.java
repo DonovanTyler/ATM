@@ -26,7 +26,7 @@ public class ATM
 		if (ids.containsKey(id))
 		{
 			double balance = ids.get(id);
-			return ("The balance is: " + balance);
+			return ("The account's balance is: " + balance);
 		}
 		else
 		{
