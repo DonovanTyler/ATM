@@ -19,6 +19,10 @@ public class ATM
 			double newValue = oldValue - amount;
 			ids.put(id, newValue);
 		}
+		else
+		{
+			System.out.println ("Invalid withdrawal amount.");
+		}
 	}
 	
 	public String checkBalance(String id)
